@@ -295,7 +295,6 @@ $(document).ready(function(){
         });
     });
 
-
     $('#answer_div').on('submit', '#tag_search_form',function(event){
     event.preventDefault();
 
@@ -312,9 +311,6 @@ $(document).ready(function(){
             $('#answer_div').html(renderM);  
         });
     });
-
-
-
 
 /////////////////////////////// testing /////////////////////////////
 
