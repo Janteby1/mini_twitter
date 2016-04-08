@@ -17,7 +17,6 @@ class UserProfile(models.Model):
             "username": user.username,
         }
 
-
 class Tweet(models.Model):
     content = models.CharField(max_length=200)
     link = models.URLField(max_length=120, null = True, default = None)

@@ -313,7 +313,24 @@ $(document).ready(function(){
         });
     });
 
+
+
+
+/////////////////////////////// testing /////////////////////////////
+
+///// Popup Login /////
+    $('#popup').on('click', function(event){ //on click
+        event.preventDefault();
+        console.log("pop")
+
+        var template = $('#test-template').html();
+        var renderM = Mustache.render(template);
+        $('#answer_div').html(renderM);  
+
+    });
 });
+
+
 
 
 
