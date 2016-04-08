@@ -1,0 +1,33 @@
+    <script id="search-template" type="x-tmpl-mustache/template">
+
+        <h4>Search</h4>
+        
+            {% csrf_token %}
+
+        <div class="row">
+            <form class="col s12" action="/search_user" id='user_search_form' method="POST">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">person_pin</i>
+                        <input id="icon_prefix" type="text" class="validate" name="search_value">
+                    </div>
+                        <input class="btn waves-effect waves-light" id="search_button" type="submit" name="action" value= "By User" <i class="material-icons right"></i>
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
+            <form class="col s12" action="/search_tag" id='tag_search_form' method="POST">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">description</i>
+                        <input id="icon_prefix" type="text" class="validate" name="search_value">
+                    </div>
+                        <input class="btn waves-effect waves-light" id="search_button" type="submit" name="action" value= "By Tag" <i class="material-icons right"></i>
+                </div>
+            </form>
+        </div>
+
+        </form>
+
+    </script>

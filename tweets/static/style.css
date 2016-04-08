@@ -1,3 +1,7 @@
+#answer_div {
+	margin-left: 1em;
+}
+
 .brand-logo {
 	padding-left: 1em !important; 
 }
@@ -23,4 +27,8 @@ form {
 
 #likes {
 	text-align: right;
+}
+
+#search_button {
+	margin-left: 1em;
 }

@@ -18,5 +18,8 @@ urlpatterns = [
     url(r'^(?P<pk>[\d]+)/repost$', views.Repost.as_view(), name='repost'),
     url(r'^(?P<pk>[\d]+)/up$', views.Up.as_view(), name='up'),
     url(r'^(?P<pk>[\d]+)/down$', views.Down.as_view(), name='down'),
+
+    url(r'^search_user$', views.Search_User.as_view(), name="search_user"),
+    url(r'^search_tag$', views.Search_Tag.as_view(), name="search_tag"),
 ]
 

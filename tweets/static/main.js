@@ -269,8 +269,49 @@ $(document).ready(function(){
     });
 });
 
+///// Search /////
+    $('#nav').on('click', ".search", function(event){
+        event.preventDefault();
+        var template = $('#search-template').html();
+        var renderM = Mustache.render(template);
+        $('#answer_div').html(renderM);
+    });
+
+    $('#answer_div').on('submit', '#user_search_form',function(event){
+    event.preventDefault();
+
+    var query_string = $(this).serialize() // returns all the data in your form
+    console.log(query_string)
+
+    $.ajax({
+        method: "POST",
+        url: $(this).attr("action"),
+        data: query_string,
+    }).done(function(data, status){
+
+            var template = $('#results-template').html();
+            var renderM = Mustache.render(template,data);
+            $('#answer_div').html(renderM);  
+        });
+    });
 
 
+    $('#answer_div').on('submit', '#tag_search_form',function(event){
+    event.preventDefault();
+
+    var query_string = $(this).serialize() // returns all the data in your form
+
+    $.ajax({
+        method: "POST",
+        url: $(this).attr("action"),
+        data: query_string,
+    }).done(function(data, status){
+
+            var template = $('#results-template').html();
+            var renderM = Mustache.render(template,data);
+            $('#answer_div').html(renderM);  
+        });
+    });
 
 });
 

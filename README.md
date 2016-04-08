@@ -32,4 +32,6 @@ Good luck and feel free to ask questions for clarity.
 
 * As a user, I can tag my posts with keywords in the form of hashtags. (ie: #fashion, #belieber)
 
+* search by user or by single hashtag 
+
 * As a user, I can search for hashtags and get a list of posts with those hashtags sorted by created date starting with the most recently created. - DIDNT ADD

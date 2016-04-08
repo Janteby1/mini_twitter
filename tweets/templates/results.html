@@ -1,0 +1,54 @@
+{%verbatim%}
+	<script id="results-template" type="x-tmpl-mustache">
+
+        <h4>Results</h4>
+
+        {{#tweets}}
+
+    <div class="row">
+        <div class="col s12 m9">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title"><div class="entry">{{user}}<br></div></span>
+                        <div class="entry">Content: <br> {{content}}<br></div><br>
+                        <div class="entry">Link: {{link}}<br></div>
+                        <div class="entry">Tags: {{tags}}<br></div>
+                        <div class="entry">Created: {{created_at}}<br></div>
+                        <div class="entry"><p id="likes">Likes: {{likes}} </p></div>
+                </div>
+
+                <div class="card-action">
+                    <div class="row">
+                        <div class="col s1 m1 l1">
+                        <a href="{{id}}/up" class="btn-floating btn-large waves-effect waves-light green" id="up_button"> <i class="material-icons right">thumb_up </i></a>
+                        </div>
+
+                        <div class="col s1 m1 l1">
+                        <a href="{{id}}/down" class="btn-floating btn-large waves-effect waves-light red" id="down_button"> <i class="material-icons right">thumb_down</i></a>
+                        </div>
+
+                        <div class="col s8 m8 l8">
+                        <a href="#" id="spacer"> <i class="material-icons right"></i></a>
+                        </div>
+
+                        <div class="col s1.5 m1.5 l1.5">
+                        <a href="{{id}}/repost" class="btn-floating btn-large waves-effect waves-light indigo" id="repost_button"> <i class="material-icons right">replay</i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        {{/tweets}}
+
+        {{^tweets}}
+        <h4>No results match search criteria</h4>
+        {{/tweets}}
+
+    </div>
+
+	</script>
+{%endverbatim%}

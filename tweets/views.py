@@ -217,4 +217,59 @@ class Delete(View):
             return JsonResponse ({"response":"Invalid information"})
 
 
+class Search_User(View):
+    def post(self, request):
+        if request.is_ajax():
+            data = request.POST
+        else:
+            body = request.body.decode()
+            if not body: 
+                return JsonResponse ({"response":"Missing Body"})
+            data = json.loads(body)
+
+        username = data.get('search_value')
+        user = User.objects.get(username=username)
+        if not user:
+            return JsonResponse({'Message':'No matches for search.'})
+
+        tweets = Tweet.objects.filter(user=user).order_by('-created_at')
+        res = [tweet.to_json() for tweet in tweets]
+        if res:
+            return JsonResponse({"tweets": res})
+        else:
+            return JsonResponse ({"response":"User have no tweets"})
+
+
+class Search_Tag(View):
+    def post(self, request):
+        if request.is_ajax():
+            data = request.POST
+        else:
+            body = request.body.decode()
+            if not body: 
+                return JsonResponse ({"response":"Missing Body"})
+            data = json.loads(body)
+
+        tag = data.get('search_value')
+        if not tag:
+            return JsonResponse({'Message':'No input for search.'})
+
+        # this is not perfect, needs to match all the tags bc they are a string and no individual yet
+        tweets = Tweet.objects.filter(tags=tag).order_by('-created_at')
+        res = [tweet.to_json() for tweet in tweets]
+        if res:
+            return JsonResponse({"tweets": res})
+        else:
+            return JsonResponse ({"response":"User have no tweets"})
+
+
+
+
+
+
+
+
+
+
+
 
