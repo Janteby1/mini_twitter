@@ -26,6 +26,10 @@ Good luck and feel free to ask questions for clarity.
 
 *Bonus*
 
+* added edit and delete tweets with user constraints
+
+* added like and dislike buttons
+
 * As a user, I can tag my posts with keywords in the form of hashtags. (ie: #fashion, #belieber)
 
-* As a user, I can search for hashtags and get a list of posts with those hashtags sorted by created date starting with the most recently created.
+* As a user, I can search for hashtags and get a list of posts with those hashtags sorted by created date starting with the most recently created. - DIDNT ADD

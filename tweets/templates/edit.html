@@ -1,0 +1,18 @@
+    <script id="edit-template" type="x-tmpl-mustache/template">
+
+        <h4>Edit Tweet</h4>
+        
+        {% verbatim %}
+        <form action="{{tweet_id}}/edit" id='edit_form' method="POST">
+        {% endverbatim %}
+
+            {% csrf_token %}
+
+            {% verbatim %}
+            {{{ edit_form }}}
+            {% endverbatim %}
+
+            <input class="btn waves-effect waves-light" id="register_button" type="submit" name="action" value= "Edit" <i class="material-icons right"></i>
+        </form>
+
+    </script>

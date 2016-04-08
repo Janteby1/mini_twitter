@@ -1,0 +1,14 @@
+
+    <script id="register-template" type="x-tmpl-mustache/template">
+
+        <h4>Register</h4>
+        <form action="" id='register_form' method="POST">
+
+            {% csrf_token %}
+            {{ user_form.as_p }}
+
+            <input class="btn waves-effect waves-light" id="register_button" type="submit" name="action" value= "Submit Registration" <i class="material-icons right"></i>
+
+        </form>
+
+    </script>

@@ -1,0 +1,13 @@
+    <script id="create-template" type="x-tmpl-mustache/template">
+
+        <h4>Create</h4>
+        <form action="" id='create_form' method="POST">
+
+            {% csrf_token %}
+            {{ create_form.as_p }}
+
+            <input class="btn waves-effect waves-light" id="register_button" type="submit" name="action" value= "Tweet!" <i class="material-icons right"></i>
+        </form>
+
+    </script>
+    

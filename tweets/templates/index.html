@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class= "button_div" id="answer_div">
+
+		<div class="parallax-container">
+			<div class="parallax"><img src="static/twitter.jpg"></div>
+		</div>
+
+		<div class="section white">
+			<div class="row container">
+				<h2 id="welcome"> Welcome to Mini Twitter!</h2>
+	        	<h4>Register or Login above to get started Tweeting</h4>
+				<br><br>	
+			</div>
+		</div>
+
+		<div class="parallax-container">
+			<div class="parallax"><img src="static/twitter.jpg"></div>
+		</div>
+    </div>
+
+{% include "register.html"%}
+{% include "login.html"%}
+{% include "create.html"%}
+{% include "all_tweets.html"%}
+{% include "profile.html"%}
+{% include "edit.html"%}
+
+
+{% endblock content %}
+
+
